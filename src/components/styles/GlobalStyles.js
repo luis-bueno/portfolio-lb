@@ -4,31 +4,30 @@ import { BreakPoints } from "./BreakPoints"
 export const GlobalStyles = createGlobalStyle`
 :root {
 
-/* BREAK POINT */
-/* --break-point-phone: 640px;
---break-point-tablet: 768px;
---break-point-laptop: 1024px;
---break-point-desktop: 1280px; */
-
 /* COLOR */
---color-text: #000000;
---color-text-black-lighter: rgba(0, 0, 0, 0.7);
---color-text-white: #FFFFFF;
---color-text-white-darker: rgba(255, 255, 255, 0.7);
+--color-text-1: #000000;
+--color-text-2: rgba(0, 0, 0, 0.7);
 
---color-background: #F2F6FF;
---color-background-blurred: hsla(0deg, 0%, 100%, 0.85);
+--color-background-1: #F2F6FF;
+--color-background-2: #E3E8FF;
 
---color-text: red;
+--color-primary: #3913B8;
+--color-secondary: #2FB5FC;
 
 @media (prefers-color-scheme: dark) {
-        --color-background: #1F1F47;;
+
+    --color-text-1: #FFFFFF;
+    --color-text-2: rgba(255, 255, 255, 0.7);
+
+    --color-background-1: #1F1F47;
+    --color-background-2: #1A2151;
+
+    --color-primary: #8352FD;
+    --color-secondary: #00CFFD;
     }
 
 
-/* --color-primary: hsl(245deg, 100%, 60%);
---color-secondary: hsl(333deg, 100%, 45%);
---color-tertiary: hsl(255deg, 85%, 30%);
+/* --color-tertiary: hsl(255deg, 85%, 30%);
 --color-decorative: hsl(200deg, 75%, 65%); */
 
 /* --color-muted: hsl(210deg, 55%, 92%);
@@ -39,9 +38,8 @@ export const GlobalStyles = createGlobalStyle`
 
 /* FONT */
 --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
---line-height-heading: 1.6;
---line-height-text: 1.6;
+                Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+--line-height: 1.6;
 --font-weight-normal: 400;
 --font-weight-semibold: 600;
 --font-weight-bold: 700;
@@ -52,11 +50,31 @@ export const GlobalStyles = createGlobalStyle`
 --font-size-b1: 24px;
 --font-size-b2: 20px;
 --font-size-text-medium:  17px;
---font-size-text-caption: 15px;
+--font-size-text-regular: 15px;
 --font-size-text-small:   13px;
 
+@media (max-width: ${BreakPoints.desktop}){
+    --font-size-h1: 52px;
+    --font-size-h2: 38px;
+    --font-size-h3: 30px;
+}
+
+@media (max-width: ${BreakPoints.laptop}){
+    --font-size-h1: 46px;
+    --font-size-h2: 34px;
+    --font-size-h3: 28px;
+}
+
 @media (max-width: ${BreakPoints.tablet}){
-    --font-size-h1: 20px;
+    --font-size-h1: 40px;
+    --font-size-h2: 30px;
+    --font-size-h3: 26px;
+}
+
+@media (max-width: ${BreakPoints.phone}){
+    --font-size-h1: 34px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
 }
 
 /* SPACE */
@@ -66,8 +84,6 @@ export const GlobalStyles = createGlobalStyle`
 --space-2-0em: 2em;
 
 /* SIZE */
-
-
 
 /* SHADOW */
 /* --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -85,10 +101,7 @@ export const GlobalStyles = createGlobalStyle`
 
 }
 body{
-    background: var(--color-background);
-
-    
-
-
+    background: var(--color-background-1);
+    font-family: var(--font-family);
 }
 `
