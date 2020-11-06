@@ -1,31 +1,49 @@
 import { createGlobalStyle } from "styled-components"
 import { BreakPoints } from "./BreakPoints"
+import { ColorStyles } from "./ColorStyles"
 
 export const GlobalStyles = createGlobalStyle`
 :root {
 
 /* COLOR */
---color-text-1: #000000;
---color-text-2: rgba(0, 0, 0, 0.7);
 
---color-background-1: #F2F6FF;
---color-background-2: #E3E8FF;
+--color-text-1: ${({ theme }) =>
+  theme === "light" ? ColorStyles.light.text_1 : ColorStyles.dark.text_1};
+--color-text-2: ${({ theme }) =>
+  theme === "light" ? ColorStyles.light.text_2 : ColorStyles.dark.text_2};
 
---color-primary: #3913B8;
---color-secondary: #2FB5FC;
+--color-background-1: ${({ theme }) =>
+  theme === "light"
+    ? ColorStyles.light.background_1
+    : ColorStyles.dark.background_1};
+--color-background-2: ${({ theme }) =>
+  theme === "light"
+    ? ColorStyles.light.background_2
+    : ColorStyles.dark.background_2};
 
-@media (prefers-color-scheme: dark) {
+--color-primary: ${({ theme }) =>
+  theme === "light" ? ColorStyles.light.primary : ColorStyles.dark.primary};
+--color-secondary: ${({ theme }) =>
+  theme === "light" ? ColorStyles.light.secondary : ColorStyles.dark.secondary};
 
-    --color-text-1: #FFFFFF;
-    --color-text-2: rgba(255, 255, 255, 0.7);
 
-    --color-background-1: #1F1F47;
-    --color-background-2: #1A2151;
+/* --color-text-1-light: #000000;
+--color-text-2-light: rgba(0, 0, 0, 0.7);
 
-    --color-primary: #8352FD;
-    --color-secondary: #00CFFD;
-    }
+--color-background-1-light: #F2F6FF;
+--color-background-2-light: #E3E8FF;
 
+--color-primary-light: #3913B8;
+--color-secondary-light: #2FB5FC;
+
+--color-text-1-dark: #FFFFFF;
+--color-text-2-dark: rgba(255, 255, 255, 0.7);
+
+--color-background-1-dark: #1F1F47;
+--color-background-2-dark: #1A2151;
+
+--color-primary-dark: #8352FD;
+--color-secondary-dark: #00CFFD; */
 
 /* --color-tertiary: hsl(255deg, 85%, 30%);
 --color-decorative: hsl(200deg, 75%, 65%); */
@@ -101,7 +119,8 @@ export const GlobalStyles = createGlobalStyle`
 
 }
 body{
+    font-family: var(--font-family); 
     background: var(--color-background-1);
-    font-family: var(--font-family);
+    color: var(--color-text-1);
 }
 `

@@ -3,8 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import github from "../../../static/logos/github.svg"
 import linkedin from "../../../static/logos/linkedin.svg"
-import sunIcon from "../../../static/icons/sun.svg"
-import moonIcon from "../../../static/icons/moon.svg"
+import ToggleTheme from "../hooks/ToggleTheme"
 
 export const Header = () => {
   const linkStyles = {
@@ -38,9 +37,7 @@ export const Header = () => {
         </Ul>
       </NavBar>
       <NavUtilities>
-        <WrapperUtilities type="button">
-          <img src={sunIcon} alt={"sun"} />
-        </WrapperUtilities>
+        <ToggleTheme />
       </NavUtilities>
     </Wrapper>
   )
@@ -68,15 +65,4 @@ const Ul = styled.ul`
 `
 const Li = styled.li`
   padding: 0 20px;
-`
-const WrapperUtilities = styled.button`
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s all;
-
-  &:focus {
-    outline: none;
-    transition: 0.3s all;
-  }
 `
