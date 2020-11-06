@@ -1,9 +1,10 @@
 import { Link } from "gatsby"
 import React from "react"
 import styled from "styled-components"
-import github from "../../../static/logos/github.svg"
-import linkedin from "../../../static/logos/linkedin.svg"
+import GithubIcon from "../../../static/logos/github.inline.svg"
+import LinkedinIcon from "../../../static/logos/linkedin.inline.svg"
 import ToggleTheme from "../hooks/ToggleTheme"
+import "./styles.css"
 
 export const Header = () => {
   const linkStyles = {
@@ -14,8 +15,8 @@ export const Header = () => {
   return (
     <Wrapper>
       <NavSocial>
-        <img style={{ marginRight: "16px" }} src={github} alt="github" />
-        <img src={linkedin} alt="linkedin" />
+        <GithubIcon className="svg-logos" />
+        <LinkedinIcon className="svg-logos" />
       </NavSocial>
       <NavBar>
         <Ul>
@@ -58,7 +59,9 @@ const NavSocial = styled.div`
   display: flex;
 `
 
-const NavBar = styled.nav``
+const NavBar = styled.nav`
+  /* color: white; */
+`
 const NavUtilities = styled.div``
 const Ul = styled.ul`
   display: flex;
@@ -66,3 +69,12 @@ const Ul = styled.ul`
 const Li = styled.li`
   padding: 0 20px;
 `
+
+// {
+/* <div
+style={{
+  height: "32px",
+  backgroundImage: url("../../../static/logos/linkedin.svg"),
+}}
+></div> */
+// }

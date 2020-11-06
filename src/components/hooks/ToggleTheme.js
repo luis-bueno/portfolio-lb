@@ -1,15 +1,24 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "./ThemeProvider"
-import sunIcon from "../../../static/icons/sun.svg"
-import moonIcon from "../../../static/icons/moon.svg"
+import SunIcon from "../../../static/icons/sun.inline.svg"
+import MoonIcon from "../../../static/icons/moon.inline.svg"
 import styled from "styled-components"
+import "./styles.css"
 
 const ToggleTheme = () => {
   const { theme, toggleTheme } = useContext(ThemeContext)
 
+  const RenderAuthButton = () => {
+    if (theme === "light") {
+      return <MoonIcon className="svg-toggle" />
+    } else {
+      return <SunIcon className="svg-toggle" />
+    }
+  }
+
   return (
-    <Wrapper type="button" onClick={toggleTheme}>
-      <img src={theme === "light" ? moonIcon : sunIcon} alt={theme} />
+    <Wrapper onClick={toggleTheme}>
+      <RenderAuthButton />
     </Wrapper>
   )
 }
@@ -19,10 +28,10 @@ const Wrapper = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  transition: 0.3s all;
+  transition: 3s all;
 
   &:focus {
     outline: none;
-    transition: 0.3s all;
+    transition: 3s all;
   }
 `

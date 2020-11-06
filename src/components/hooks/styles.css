@@ -1,0 +1,7 @@
+.svg-toggle path {
+  fill: var(--color-text-2);
+}
+
+.svg-toggle:hover path {
+  fill: var(--color-text-1);
+}
