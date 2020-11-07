@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Luis Bueno`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Awesome portfolio website.`,
     author: `@luisbueno`,
   },
   plugins: [
@@ -25,6 +25,18 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Luis Bueno`,
+        short_name: `Luis Bueno`,
+        start_url: `/`,
+        background_color: `#eee`,
+        theme_color: `#333`,
+        display: `standalone`,
+        icon: `${__dirname}/static/logos/lb-logo.png`,
       },
     },
   ],

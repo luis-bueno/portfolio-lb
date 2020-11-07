@@ -5,7 +5,7 @@ import { Header } from "../components/sections/Header"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Luis Bueno" />
     <Header />
   </Layout>
 )
