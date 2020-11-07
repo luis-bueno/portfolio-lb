@@ -1,6 +1,6 @@
 import { useSpring } from "react-spring"
 
-export default ({ isDarkMode }) => {
+export const AnimationProperties = isDarkMode => {
   const properties = {
     dark: {
       r: 9,

@@ -1,6 +1,6 @@
 import React from "react"
 import { animated } from "react-spring"
-import AnimationProperties from "./AnimationProperties"
+import { AnimationProperties } from "./AnimationProperties"
 import { ThemeContext } from "./ThemeProvider"
 
 const AnimatedIcon = () => {
