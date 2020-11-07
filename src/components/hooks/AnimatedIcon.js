@@ -18,8 +18,6 @@ const AnimatedIcon = () => {
     linesProps,
   ] = AnimationProperties(isDarkMode)
 
-  console.log(svgContainerProps)
-
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
