@@ -3,7 +3,7 @@ import React from "react"
 import styled from "styled-components"
 import GithubIcon from "../../../static/logos/github.inline.svg"
 import LinkedinIcon from "../../../static/logos/linkedin.inline.svg"
-import ToggleTheme from "../hooks/ToggleTheme"
+import AnimatedIcon from "../hooks/AnimatedIcon"
 import "./styles.css"
 
 export const Header = () => {
@@ -38,7 +38,7 @@ export const Header = () => {
         </Ul>
       </NavBar>
       <NavUtilities>
-        <ToggleTheme />
+        <AnimatedIcon />
       </NavUtilities>
     </Wrapper>
   )
@@ -50,7 +50,6 @@ const Wrapper = styled.header`
   margin: 60px auto;
   padding: 0 16px;
   height: 60px;
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,22 +58,12 @@ const NavSocial = styled.div`
   display: flex;
 `
 
-const NavBar = styled.nav`
-  /* color: white; */
-`
+const NavBar = styled.nav``
 const NavUtilities = styled.div``
+
 const Ul = styled.ul`
   display: flex;
 `
 const Li = styled.li`
   padding: 0 20px;
 `
-
-// {
-/* <div
-style={{
-  height: "32px",
-  backgroundImage: url("../../../static/logos/linkedin.svg"),
-}}
-></div> */
-// }
