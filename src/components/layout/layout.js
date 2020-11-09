@@ -11,7 +11,7 @@ function Layout({ children }) {
     <>
       <MobileNavProvider>
         <GlobalStyles theme={theme} />
-        <main>{children}</main>
+        {children}
       </MobileNavProvider>
     </>
   )

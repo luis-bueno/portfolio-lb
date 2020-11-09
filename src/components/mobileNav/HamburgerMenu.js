@@ -2,9 +2,12 @@ import React, { useContext } from "react"
 import styled from "styled-components"
 import { useSpring, animated } from "react-spring"
 import { MobileNavContext } from "../mobileNav/MobileNavProvider"
+import { BreakPoints } from "../styles/BreakPoints"
+import useScrollDisabler from "../hooks/useScrollDisabler"
 
 const HamburgerIcon = ({ size }) => {
   const { isOpen, toggleOpen } = useContext(MobileNavContext)
+  useScrollDisabler(isOpen)
 
   const svgProps = useSpring({
     transform: `rotate(${isOpen ? -45 : 0}deg)`,
@@ -41,6 +44,7 @@ const HamburgerIcon = ({ size }) => {
       style={{
         width: size,
         height: size,
+        zIndex: "2",
         ...svgProps,
       }}
     >
@@ -64,6 +68,9 @@ const Svg = styled(animated.svg)`
   display: block;
   overflow: visible;
   transform-origin: center center;
+  @media (min-width: ${BreakPoints.phone}) {
+    display: none;
+  }
 `
 
 export default HamburgerIcon
