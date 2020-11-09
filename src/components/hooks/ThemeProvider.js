@@ -3,9 +3,8 @@ import useDarkMode from "./useDarkMode"
 
 export const ThemeContext = createContext("light")
 
-export default ({ children }) => {
+const ThemeProvider = ({ children }) => {
   const [theme, toggleTheme] = useDarkMode()
-
   return (
     <ThemeContext.Provider
       value={{
@@ -17,3 +16,5 @@ export default ({ children }) => {
     </ThemeContext.Provider>
   )
 }
+
+export default ThemeProvider

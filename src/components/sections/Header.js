@@ -4,6 +4,8 @@ import styled from "styled-components"
 import GithubIcon from "../../../static/logos/github.inline.svg"
 import LinkedinIcon from "../../../static/logos/linkedin.inline.svg"
 import AnimatedIcon from "../hooks/AnimatedIcon"
+import HamburgerIcon from "../mobileNav/HamburgerMenu"
+import { BreakPoints } from "../styles/BreakPoints"
 import "./styles.css"
 
 export const Header = () => {
@@ -39,6 +41,7 @@ export const Header = () => {
       </NavBar>
       <NavUtilities>
         <AnimatedIcon />
+        <HamburgerIcon size={32} />
       </NavUtilities>
     </Wrapper>
   )
@@ -58,8 +61,15 @@ const NavSocial = styled.div`
   display: flex;
 `
 
-const NavBar = styled.nav``
-const NavUtilities = styled.div``
+const NavBar = styled.nav`
+  @media (max-width: ${BreakPoints.phone}) {
+    display: none;
+  }
+`
+const NavUtilities = styled.div`
+  display: flex;
+  align-items: center;
+`
 
 const Ul = styled.ul`
   display: flex;

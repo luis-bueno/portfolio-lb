@@ -1,14 +1,14 @@
-import React from "react"
+import React, { useState, useContext } from "react"
 import { animated } from "react-spring"
 import { AnimationProperties } from "./AnimationProperties"
 import { ThemeContext } from "./ThemeProvider"
 
 const AnimatedIcon = () => {
-  const [isDarkMode, setDarkMode] = React.useState(false)
-  const { toggleTheme } = React.useContext(ThemeContext)
+  const [isDarkMode, setDarkMode] = useState(false)
+  const { toggleTheme } = useContext(ThemeContext)
 
   const toggleDarkMode = () => {
-    setDarkMode(previous => !previous)
+    setDarkMode(!isDarkMode)
   }
 
   const [
