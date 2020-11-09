@@ -14,48 +14,55 @@ const Header = () => {
     fontWeight: "var(--font-weight-normal)",
   }
   return (
-    <Wrapper>
-      <NavSocial>
-        <GithubIcon className="svg-logos" />
-        <LinkedinIcon className="svg-logos" />
-      </NavSocial>
-      <NavBar>
-        <Link to="/" style={linkStyles}>
-          About
-        </Link>
-        <Link to="/" style={linkStyles}>
-          Work
-        </Link>
-        <Link to="/" style={linkStyles}>
-          Contact
-        </Link>
-      </NavBar>
-      <NavUtilities>
-        <AnimatedIcon />
-        <HamburgerIcon size={32} />
-      </NavUtilities>
-    </Wrapper>
+    <Background>
+      <Wrapper>
+        <NavSocial>
+          <GithubIcon className="svg-logos" />
+          <LinkedinIcon className="svg-logos" />
+        </NavSocial>
+        <NavBar>
+          <Link to="/" style={linkStyles}>
+            About
+          </Link>
+          <Link to="/" style={linkStyles}>
+            Work
+          </Link>
+          <Link to="/" style={linkStyles}>
+            Contact
+          </Link>
+        </NavBar>
+        <NavUtilities>
+          <AnimatedIcon />
+          <HamburgerIcon size={32} />
+        </NavUtilities>
+      </Wrapper>
+    </Background>
   )
 }
 
 export default Header
 
+const Background = styled.div`
+  background-color: var(--color-background-1);
+  margin-top: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  @media (max-width: ${BreakPoints.phone}) {
+    background-color: transparent;
+    margin-top: 0px;
+  }
+`
 const Wrapper = styled.header`
   width: 100%;
-  max-width: 1000px;
-  margin-top: 40px;
+  max-width: 1024px;
+  margin: auto;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 2;
-  background-color: var(--color-background-1);
   backdrop-filter: blur(8px);
-  @media (max-width: ${BreakPoints.phone}) {
-    margin-top: 0px;
-  }
 `
 const NavSocial = styled.div`
   display: flex;
