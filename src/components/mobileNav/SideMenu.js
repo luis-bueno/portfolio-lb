@@ -6,10 +6,10 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Sidebar = Keyframes.Spring({
-  open: { delay: 0, x: 100 },
+  open: { delay: 0, x: 0 },
   close: async call => {
     await delay(300)
-    await call({ delay: 0, x: 200 })
+    await call({ delay: 0, x: 100 })
   },
 })
 
@@ -78,7 +78,7 @@ const Wrapper = styled(animated.div)`
   bottom: 0;
   z-index: 1;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
