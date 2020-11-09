@@ -43,7 +43,7 @@ export default Header
 const Wrapper = styled.header`
   width: 100%;
   max-width: 1000px;
-  margin: 40px auto 0;
+  margin-top: 40px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -51,6 +51,11 @@ const Wrapper = styled.header`
   position: sticky;
   top: 0;
   z-index: 2;
+  background-color: var(--color-background-1);
+  backdrop-filter: blur(8px);
+  @media (max-width: ${BreakPoints.phone}) {
+    margin-top: 0px;
+  }
 `
 const NavSocial = styled.div`
   display: flex;
