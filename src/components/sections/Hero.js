@@ -44,21 +44,13 @@ const Wrapper = styled.div`
 
 const ContentWrapper = styled.div`
   max-width: 1024px;
-  /* height: clamp(300px, 50vh, 450px); */
   margin: 100px auto;
   padding: 0 16px;
   display: grid;
   grid-template-columns: max-content minmax(600px, 1fr);
-  /* grid-template-rows: clamp(300px, 50vh, 450px); */
   gap: 50px;
   justify-items: start;
   align-items: end;
-  /* @media (max-width: ${BreakPoints.laptop}) {
-    margin: 50px;
-  } */
-  /* @media (max-width: ${BreakPoints.laptop}) {
-    margin: 0px;
-  } */
 `
 const TextWrapper = styled.div`
   display: grid;

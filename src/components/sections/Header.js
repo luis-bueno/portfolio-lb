@@ -8,11 +8,6 @@ import HamburgerIcon from "../mobileNav/HamburgerMenu"
 import { BreakPoints } from "../styles/BreakPoints"
 
 const Header = () => {
-  const linkStyles = {
-    color: "var(--color-text-1)",
-    fontSize: "var(--font-size-text-medium)",
-    fontWeight: "var(--font-weight-normal)",
-  }
   return (
     <Wrapper>
       <WrapperContent>
@@ -21,15 +16,9 @@ const Header = () => {
           <LinkedinIcon />
         </NavSocial>
         <NavBar>
-          <Link to="/" style={linkStyles}>
-            About
-          </Link>
-          <Link to="/" style={linkStyles}>
-            Work
-          </Link>
-          <Link to="/" style={linkStyles}>
-            Contact
-          </Link>
+          <Link to="/">About</Link>
+          <Link to="/">Work</Link>
+          <Link to="/">Contact</Link>
         </NavBar>
         <NavUtilities>
           <AnimatedIcon />
@@ -83,7 +72,11 @@ const NavSocial = styled.div`
 const NavBar = styled.nav`
   & > * {
     padding: 0 20px;
+    color: var(--color-text-1);
+    font-size: var(--font-size-text-medium);
+    font-weight: var(--font-weight-normal);
   }
+
   @media (max-width: ${BreakPoints.phone}) {
     display: none;
   }
