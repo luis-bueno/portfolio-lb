@@ -21,6 +21,15 @@ export const GlobalStyles = createGlobalStyle`
     ? ColorStyles.light.background_2
     : ColorStyles.dark.background_2};
 
+--color-background-1-not: ${({ theme }) =>
+  theme === "dark"
+    ? ColorStyles.light.background_1
+    : ColorStyles.dark.background_1};
+--color-background-2-not: ${({ theme }) =>
+  theme === "dark"
+    ? ColorStyles.light.background_2
+    : ColorStyles.dark.background_2};
+
 --color-primary: ${({ theme }) =>
   theme === "light" ? ColorStyles.light.primary : ColorStyles.dark.primary};
 --color-secondary: ${({ theme }) =>

@@ -20,20 +20,16 @@ export const B1 = styled.p`
 export const B2 = styled.p`
   font-size: var(--font-size-b2);
   font-weight: var(--font-weight-normal);
-  line-height: var(--line-height);
 `
 export const TextMedium = styled.p`
   font-size: var(--font-size-text-medium);
   font-weight: var(--font-weight-normal);
-  line-height: var(--line-height);
 `
 export const TextRegular = styled.p`
   font-size: var(--font-size-text-regular);
   font-weight: var(--font-weight-normal);
-  line-height: var(--line-height);
 `
 export const TextSmall = styled.p`
   font-size: var(--font-size-text-small);
   font-weight: var(--font-weight-normal);
-  line-height: var(--line-height);
 `

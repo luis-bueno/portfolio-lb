@@ -90,8 +90,6 @@ video {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font-size: 100%;
-  font: inherit;
 }
 
 /* Set core body defaults */

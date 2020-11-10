@@ -14,11 +14,11 @@ const Header = () => {
     fontWeight: "var(--font-weight-normal)",
   }
   return (
-    <Background>
-      <Wrapper>
+    <Wrapper>
+      <WrapperContent>
         <NavSocial>
-          <GithubIcon className="svg-logos" />
-          <LinkedinIcon className="svg-logos" />
+          <GithubIcon />
+          <LinkedinIcon />
         </NavSocial>
         <NavBar>
           <Link to="/" style={linkStyles}>
@@ -35,34 +35,34 @@ const Header = () => {
           <AnimatedIcon />
           <HamburgerIcon size={32} />
         </NavUtilities>
-      </Wrapper>
-    </Background>
+      </WrapperContent>
+    </Wrapper>
   )
 }
 
 export default Header
 
-const Background = styled.div`
+const Wrapper = styled.div`
   background-color: var(--color-background-1);
   margin-top: 30px;
+  z-index: 2;
   position: sticky;
   top: 0;
-  z-index: 2;
 
   @media (max-width: ${BreakPoints.phone}) {
     background-color: transparent;
     margin-top: 0px;
   }
 `
-const Wrapper = styled.header`
+const WrapperContent = styled.header`
   width: 100%;
   max-width: 1024px;
-  margin: auto;
+  margin: 0 auto;
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(20px);
 `
 const NavSocial = styled.div`
   display: flex;
