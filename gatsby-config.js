@@ -22,6 +22,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-load-script",
+      options: {
+        src: "/animation.js",
+      },
+    },
+    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here

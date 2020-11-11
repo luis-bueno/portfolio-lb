@@ -5,6 +5,7 @@ import ArrowIcon from "../../../static/icons/arrow-right.inline.svg"
 import { H1, B1, TextMedium } from "../styles/TextStyles"
 import { ButtonCTA } from "../buttons/ButtonCTA"
 import { BreakPoints } from "../styles/BreakPoints"
+import "./HeroStyles.css"
 
 const Hero = () => {
   return (
@@ -13,7 +14,14 @@ const Hero = () => {
         <TextWrapper>
           <HeroText>
             <H1>LUIS BUENO</H1>
-            <B1>Designer that code</B1>
+            <B1>
+              <span className="h1-animation">
+                <span className="text-wrapper">
+                  <span className="line line1"></span>
+                  <span className="word"></span>
+                </span>
+              </span>
+            </B1>
           </HeroText>
           <HeroCTA>
             <HeroCTAText>
@@ -58,7 +66,10 @@ const TextWrapper = styled.div`
   gap: 50px;
 `
 
-const HeroText = styled.div``
+const HeroText = styled.div`
+  display: grid;
+  gap: 10px;
+`
 
 const HeroCTA = styled.div``
 

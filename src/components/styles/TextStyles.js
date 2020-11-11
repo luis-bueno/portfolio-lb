@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const H1 = styled.h1`
   font-size: var(--font-size-h1);
   font-weight: var(--font-weight-bold);
+  margin-left: -3px;
 `
 export const H2 = styled.h2`
   font-size: var(--font-size-h2);
@@ -15,7 +16,6 @@ export const H3 = styled.h3`
 export const B1 = styled.p`
   font-size: var(--font-size-b1);
   font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height);
 `
 export const B2 = styled.p`
   font-size: var(--font-size-b2);
